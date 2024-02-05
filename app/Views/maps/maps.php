@@ -1607,12 +1607,12 @@ var layerGroup = L.layerGroup().addTo(map);
 var layerGroupSales = L.layerGroup().addTo(map);
 
 for (i = 0; i < locations.length; i++) {
-    marker = L.marker([locations[i][1], locations[i][2]]);
+    marker = L.marker([locations[i][1], locations[i][2]]).bindPopup(locations[i][0],locations[i][1],locations[i][2]);
     layerGroup.addLayer(marker);
 }
 
 for (i = 0; i < locationssales.length; i++) {
-    marker = L.marker([locationssales[i][1], locationssales[i][2]],{icon: salesIcon});
+    marker = L.marker([locationssales[i][1], locationssales[i][2]],{icon: salesIcon}).bindPopup(locationssales[i][0],locationssales[i][1],locationssales[i][2]);
     layerGroupSales.addLayer(marker);
 }
 
